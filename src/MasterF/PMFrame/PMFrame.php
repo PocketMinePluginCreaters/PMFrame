@@ -33,12 +33,5 @@ class PMFrame {
     return null;
   }
 
-  public static function SQLite(\SQLite3 $db, $name) {
-    self::$db[$name] = new PFSQLite3($db);
-  }
-
-  public static function getDB($name) {
-    return self::$db[$name] ?? null;
-  }
 
 }
