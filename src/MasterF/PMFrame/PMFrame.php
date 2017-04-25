@@ -4,6 +4,7 @@ namespace MasterF\PMFrame;
 
 use pocketmine\Player;
 use pocketmine\Server;
+use pocketmine\level\Level;
 
 use MasterF\PMFrame\Object\{PFPlayer, PFServer, PFSQLite3};
 
@@ -23,8 +24,8 @@ class PMFrame {
     if($obj === null) return new PFServer(Server::getInstance());
 
     foreach($instanceList as $instance => $pfInst) {
-      // printf(get_class($obj));
       if($obj instanceof $instance) {
+        // echo $instance;
         return new $pfInst($obj);
       }
 
