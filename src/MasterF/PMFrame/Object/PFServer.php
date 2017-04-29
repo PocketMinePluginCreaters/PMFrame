@@ -52,7 +52,7 @@ class PFServer {
 
     if($task === null) return false;
 
-    $this->server->getScheduler()->scheduleDelayedTask($task, $tick);
+    $this->server->getScheduler()->scheduleDelayedTask($Ttask, $tick);
 
     return true;
   }
